@@ -26,3 +26,37 @@ This project extends a 2D robot football simulation environment based on the ope
 ## Video Demo
 
 Watch the gameplay demo here: [https://youtu.be/ufvMlBDDpaw](https://youtu.be/ufvMlBDDpaw)
+
+
+## How to Run
+
+Install the required dependencies:
+
+```bash
+pip install robot_soccer_python
+pip install torch numpy matplotlib pygame
+```
+
+Then run the desired matchup:
+
+```bash
+# Manual rule-based controller
+python Handrules.py
+
+# DQN vs Double DQN
+python DQN_VS_DDQN.py
+
+# DQN vs Dueling DQN
+python DQN_VS_DuelingDQN.py
+
+# DQN vs Discrete SAC
+python DQN_VS_SAC.py
+```
+
+After training or evaluation, use the following script to visualize ball possession:
+
+```bash
+python plot_control_heatmap.py
+```
+
+Ensure that the simulation starts with visual display enabled and log files will be generated automatically for analysis.
